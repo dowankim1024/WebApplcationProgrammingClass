@@ -1,12 +1,31 @@
 {
+  "_comment": "파일 역할: 프로젝트 메타데이터와 스크립트/의존성 정의(NPM이 해석)",
   "name": "webclass",
   "version": "1.0.0",
-  "description": "",
+  "description": "```bash npm init -y ```",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "Dowan Kim",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dowankim1024/WebApplcationProgrammingClass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dowankim1024/WebApplcationProgrammingClass/issues"
+  },
+  "homepage": "https://github.com/dowankim1024/WebApplcationProgrammingClass#readme",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.1",
+    "jest": "^30.1.3",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.9.2"
+  }
 }

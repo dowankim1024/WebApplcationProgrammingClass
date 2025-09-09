@@ -1,0 +1,47 @@
+{
+  // 파일 역할: TypeScript 컴파일러 옵션 설정(프로젝트 전체 TS 빌드/타입체크 기준)
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": { // TS 컴파일러 동작 옵션 묶음
+    // File Layout
+    // "rootDir": "./src", // 컴파일 입력 루트(필요 시 활성화)
+    // "outDir": "./dist", // 컴파일 산출물 경로(필요 시 활성화)
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext", // Node ESM/CJS 인식 모드
+    "target": "esnext", // 최신 JS 문법 타깃
+    // For nodejs:
+    // "lib": ["esnext"], // 포함할 표준 라이브러리 목록
+    // "types": ["node"], // 전역 타입 패키지 로드
+    // and npm install -D @types/node // 위 옵션 사용 시 설치 필요
+    // Other Outputs
+    "sourceMap": true, // 소스맵 생성
+    "declaration": true, // .d.ts 생성
+    "declarationMap": true, // 선언 파일용 소스맵 생성
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true, // 인덱스 접근에 undefined 포함
+    "exactOptionalPropertyTypes": true, // 선택적 속성 타입 엄밀화
+    // Style Options
+    // "noImplicitReturns": true, // 모든 경로에서 반환 강제
+    // "noImplicitOverride": true, // override 누락 방지
+    // "noUnusedLocals": true, // 미사용 지역변수 오류
+    // "noUnusedParameters": true, // 미사용 매개변수 오류
+    // "noFallthroughCasesInSwitch": true, // switch fallthrough 금지
+    // "noPropertyAccessFromIndexSignature": true, // 인덱스 시그니처 접근 제한
+    // Recommended Options
+    "strict": true, // 엄격 모드
+    "jsx": "react-jsx", // React 17+ JSX 변환
+    "isolatedModules": true, // 파일 단위 트랜스파일 보장
+    "noUncheckedSideEffectImports": true, // 사이드이펙트 import 체크
+    "moduleDetection": "force", // ES 모듈 감지 강제
+    "skipLibCheck": true, // d.ts 검사 스킵
+    "esModuleInterop": true, // CJS default import 호환
+    "verbatimModuleSyntax": false, // 모듈 구문 정규화 허용
+    "allowSyntheticDefaultImports": true, // 합성 default import 허용
+    "baseUrl": ".", // 절대경로 기준점
+    "paths": { // 경로 별칭 설정
+      "@/*": [
+        "src/*" // '@/...'를 'src/...'로 매핑
+      ]
+    }
+  }
+}
